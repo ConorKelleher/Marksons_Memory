@@ -1,0 +1,35 @@
+First task - Get a plaintext, processable copy of Wittgenstein’s Mistress
+
+This is proving harder than originally thought. There doesn’t appear to be such a copy available online. Various websites advertise an ePub version of the book but they are all scam websites, requiring a text-based subscription before allowing access.
+
+A pdf of the book is available at https://www.scribd.com/doc/97355891/Markson-David-Wittgenstein-s-Mistress
+
+This pdf does not contain text files. It contains images. Scans of a physical copy of the book. My options remain as followed:
+	1). Find software capable of processing these images and converting 
+	    them to plaintext.
+	2). Manually type every letter of the book.
+Hopefully option 1 pans out.
+
+I have found software at http://www.convertimagetotext.net/downloadsoftware.php capable of converting images of text to text. The free trial of the software only permits 2 pages to be processed at a time however.
+I will need to separate the 244-page pdf into 244 individual jpgs. I have found software capable of separating a pdf into individual jpegs at http://pdftoimage.com/
+
+I now have 244 individual text files. They do not have appropriate formatting, however. I will need to first combine them all into a single text file, then go through them formatting them appropriately, as part of this study involves analysing paragraphs as a single unit, so this format must be preserved in the file to be processed
+
+I’m going through it page by page, ensuring the correct format persists for the purpose of processing it. There are certain issues with the auto-text generation. For instance, certain instances of the character “I” were printed as “!”. Also some marks on the pages were converted to non-alphabetic characters such as an “o” coming out as the infinity symbol. I will have to create a program to process the finished work when I am done, identifying certain things.
+
+I’ll have to search for instances of “!” and see if they should be there.
+
+I’ll have to search for times when a full stop is not proceeded by a newline character (or a space, then a newline character). This will occur for things like St. Something (valid), when the character has been parsed mistakenly (invalid) and when I have missed a new sentence and it must be moved to a new line (invalid)
+
+I’ll have to search for characters other than letters and typical punctuation, as these should most likely not be in the text whatsoever.
+
+I’ll have to search for a new line beginning with a lowercase letter.
+
+I’ll have to ensure that every line ends with a full stop
+
+Bralun keeps appearing instead of Brahm. Search for that.
+
+Also be sure to spellcheck everything.
+Track all names and identify misspellings among them. - word spellcheck
+
+QUESTION MARKS
