@@ -1,0 +1,115 @@
+Month-by-Month Breakdown
+
+OCTOBER: 3 weeks preparation
+NOVEMBER: 2.5 weeks project work, 1.5 weeks interim report
+DECEMBER: 1 week interim report, INTERIM SUBMISSION, 2 weeks research, rest holidays
+JANUARY: project work
+FEBRUARY: 2 weeks project work, 2 weeks preparing document
+MARCH: 2 weeks preparing document, one week preparing for oral, ORAL SUBMISSION, rest preparing document
+APRIL: 1 week to prepare document, FINAL SUBMISSION
+
+
+
+Week-by-Week Breakdown
+
+Week1 (10th-16th October)
+    Prep (Lecture notes and becoming familiar with NLTK)
+
+Week2 (17th-23rd October)
+    Prep (Lecture notes and becoming familiar with NLTK)
+
+Week3 (24th-30th October)
+    Prep (Further NLTK practice and independent investigation into useful concepts)
+
+Week4 (31st October-6th November)
+    31st: Prep (Further NLTK practice and independent investigation into useful concepts)
+     |
+    1st : Project (Plan what is to be done in the remaining weeks allocated to project work and begin working at named-entity recognition and processing of the text)
+
+Week5 (7th-13th November)
+    Project (Further work on named-entity recognition)
+
+Week6 (14th-20th November)
+    Project (Begin creation and analysis of networks among these named entities)
+
+Week7 (21st-27th November)
+    Interim Report
+
+Week8 (28th November-4th December)
+    Interim Report
+
+Week9 (5th-11th December)
+    5th : Interim Report
+     |
+    9th : Interim Report DUE
+     |
+    10th: Project (To be filled in in week 4)
+
+Week10 (12th-18th December)
+    Project (To be filled in in week 4)
+
+Week11 (19th-25th December)
+    19th: Project (To be filled in in week 4)
+     |
+    23rd: Vacation
+
+Week12 (26th December-1st January)
+    Vacation
+
+Week13 (2nd-8th January)
+    Project (To be filled in in week 4)
+
+Week14 (9th-15th January)
+    Project (To be filled in in week 4)
+
+Week15 (16th-22nd January)
+    Project (To be filled in in week 4)
+
+Week16 (23rd-29th January)
+    Project (To be filled in in week 4)
+
+Week17 (30th January-5th February)
+    Project (Visualisations)
+
+Week18 (6th-12th February)
+    Project (Visualisations)
+
+Week19 (13th-19th February)
+    Prepare Document (Core layout + Introduction)
+
+Week20 (20th-26th February)
+    Prepare Document (Rough 1st Draft)
+
+Week21 (27th February-5th March)
+    Prepare Document (Add missing elements to project and document them)
+
+Week22 (6th-12th March)
+    Prepare Document (More well-rounded 2nd Draft, including missing elements)
+
+Week23 (13th-19th March)
+    Oral Report Preparation
+
+Week24 (20th-26th March)
+    20th: ORAL REPORT DUE
+     |
+    21st: Prepare Document (3rd draft, considering feedback and completeness)
+
+Week25 (27th March-2nd April)
+    Prepare Document (Emphasis on formatting, visuals and overall clarity + 4th Draft)
+
+Week26 (3rd-9th April)
+    3rd: Prepare Document (Any remaining adjustments, if needed)
+     |
+    7th: FINAL SUBMISSION DUE
+    
+
+This week-by-week breakdown gives the following time allocation to each task;
+
+Preparation	: ~3 weeks	(22 days)
+Interim Report	: ~2.5 weeks	(19 days)
+Project Work	: ~11 weeks	(75 days)
+Vacation Days	: ~1.5 weeks	(10 days)
+Oral Report	: ~1 week	(8 days)
+Final Document	: ~6.5 weeks	(47 days)
+_________________________________________
+		  ~26 weeks	(181 days)
