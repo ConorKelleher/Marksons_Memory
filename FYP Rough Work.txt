@@ -1,3 +1,10 @@
+*** Recurring trends to search for
+Time out of mind
+Mentions of “poor <character name>”
+
+***
+
+
 First task - Get a plaintext, processable copy of Wittgenstein’s Mistress
 
 This is proving harder than originally thought. There doesn’t appear to be such a copy available online. Various websites advertise an ePub version of the book but they are all scam websites, requiring a text-based subscription before allowing access.
@@ -17,19 +24,69 @@ I now have 244 individual text files. They do not have appropriate formatting, h
 
 I’m going through it page by page, ensuring the correct format persists for the purpose of processing it. There are certain issues with the auto-text generation. For instance, certain instances of the character “I” were printed as “!”. Also some marks on the pages were converted to non-alphabetic characters such as an “o” coming out as the infinity symbol. I will have to create a program to process the finished work when I am done, identifying certain things.
 
-I’ll have to search for instances of “!” and see if they should be there.
+CHECK	I’ll have to search for instances of “!” and see if they should be there.
 
-I’ll have to search for times when a full stop is not proceeded by a newline character (or a space, then a newline character). This will occur for things like St. Something (valid), when the character has been parsed mistakenly (invalid) and when I have missed a new sentence and it must be moved to a new line (invalid)
+CHECK	I’ll have to search for times when a full stop is not proceeded by a newline character (or a space, then a newline character). This will occur for things like St. Something (valid), when the character has been parsed mistakenly (invalid) and when I have missed a new sentence and it must be moved to a new line (invalid).
 
-I’ll have to search for characters other than letters and typical punctuation, as these should most likely not be in the text whatsoever.
+CHECK	I’ll have to search for characters other than letters and typical punctuation, as these should most likely not be in the text whatsoever.
 
-I’ll have to search for a new line beginning with a lowercase letter.
+CHECK	I’ll have to search for a new line beginning with a lowercase letter.
 
-I’ll have to ensure that every line ends with a full stop
+CHECK	I’ll have to ensure that every line ends with a full stop/?/!
 
-Bralun keeps appearing instead of Brahm. Search for that.
+CHECK	Bralun keeps appearing instead of Brahm. Search for that.
 
-Also be sure to spellcheck everything.
-Track all names and identify misspellings among them. - word spellcheck
+CHECK	Also be sure to spellcheck everything.
+CHECK	Track all names and identify misspellings among them. - word spellcheck
 
 QUESTION MARKS
+
+
+
+NLTK TUTORIAL NOTES
+
+text.concordance(“word”)	- return every line in “text” featuring “word”
+text.similar(“word”)		- return every word with similar context to “word” in “text”
+text.common_contexts(“word1”, “word2”)	- return every context that works for both words
+text.dispersion_plot([“word1”, “word2”]) - display dispersion plot of words in text
+set(text)			- return vocabulary used in text
+sorted(list)			- return an alphabetically sorted version of list
+text.count(word)		- return number of times count occurs in text
+FreqDist(text)			- return frequency distribution of words in text
+fdist.keys()			- return list of keys from frequency distribution fist
+fdist.plot(50, cumulative=False)- plot frequency distribution for top 50 used words
+fdist.hapaxes()			- return list of words only used once
+
+First check for most common words
+Then check for least common words
+
+
+Pre-Processing
+In order to track frequency of words, we should normalise words with stemming/lemmatisation
+
+
+
+I have finished going through the text to remove errors from the image to plaintext conversion process. Now the remaining tasks are as follows;
+
+4) apply these packages to extract a by-paragraph parse of the main entities as they occur in the novel
+
+5) develop data analytics techniques for tracking of the sequential structure of various tracked entities
+
+6) determine if there are any deep regularities in the associative structure of references to objects
+
+To accomplish task 4, I will have to test and possibly improve existing NER (named entity recognition) tools and find a way to derive a 3-gram structure of occurrences of named entities (the essence of the relationships in the network of the novel)
+
+I have also been given the task of establishing a representation for the processed version of the novel, storing only information about named entities and their relationships. Actually, the representation will also have to include a way of tracking how far into the novel the relationship occurs, using a paragraph count variable.
+
+To derive these named entities, it appears I will need to first perform a task called chunking, recognising how groups of words such as “the small brown dog” all work to refer to only a single noun phrase (NP). These words form a chunk, which may work as either side of the relationship.
+
+From testing the nltk.ne_chunk() method with the first page, it appears to function quite well at recognising the named entities but there is already an overlooked entity. The words “ancient Troy” appear at the end of the first page. This is recognised as an adjective, followed by a proper noun but it is not recognised as an NE. Making the “a” in “ancient” uppercase, however allows this to be recognised. The fact that “Troy” is often used without the word “ancient”, means that this cannot be a workaround for the entire text, however so the chunking process appears to need customisation.
+
+I definitely do need to modify the results of the nltk chunker. For instance, even though it’s not exactly wrong, we do want the word “I” to be recognised as a named entity, but this is overlooked by the chunker, as it’s not a proper noun. There is also the issue of “Troy” not being recognised in certain contexts. I have created a method to take a chunked tree, and a list of additional named entities, which looks through the tree and replaces a tuple whose string is included in the list with a subtree containing the tuple, indicating that it is in fact a named entity. I will have to look at more example pages to look for further examples of overlooked named entities, in the hope of improving overall accuracy.
+
+I will also need to REMOVE/modify some of the supposed named entities found by the nltk’s method as many are senseless, irrelevant words such as “Well” at the beginning of sentences, or words before actual named entities like “Poor Simon James Joyce” or “Poor Electra”
+
+
+Project mk.2 - Phrase recognition
+
+I have constructed a program to read the text. It takes the book as a whole, uses nltk to tokenise the book into its individual paragraphs
