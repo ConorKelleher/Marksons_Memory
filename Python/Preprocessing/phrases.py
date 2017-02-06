@@ -1,7 +1,7 @@
 import nltk
 import os.path
 
-phrase_start_length = 2
+phrase_start_length = 5
 phrases = [] # list of lists of phrases - each sublist stores each length of phrase
 
 def phrase_in_list_ignorecase(new_phrase, phrase_list): # return which phrase_num is match
@@ -108,9 +108,9 @@ def print_all():
 
 # writes all phrase data to the desired file name. If the file exists, a new file is
 # created with a greater index so older data is preserved
-def write_all_to_file():
-    filePath = "Phrase_Data"
-    if os.path.exists(filePath):
+def write_all_to_file(textType):
+    filePath = "Phrase_Data_" + textType
+    if os.path.exists(filePath + ".txt"):
         file_index = 0
         while os.path.exists(filePath + "_" + str(file_index) + ".txt"):
             file_index += 1
@@ -125,16 +125,63 @@ def write_all_to_file():
     file.close()
 
 
-#read_text("Full Text.txt", ['.', ','])
-#read_text("Single.txt", ['.', ','])
-read_text("Test_Data.txt", ['.', ','])
+# parse the saved phrases and store in useable variable
+def read_saved_phrases(url):
+    if os.path.exists(url):
+        file = open(url, "r")
+        text = file.read()
+        file.close()
+        
+        set_min_length = True
+        phrases = []
+        paragraphs = text.split("\n\n")
+        
+        for paragraph in paragraphs:
+            split_paragraph = paragraph.split(" : ")
+            if(len(split_paragraph) < 2):
+                continue
+        
+            phrase_list = []
+            
+            if set_min_length:
+                phrase_start_length = int (paragraph.split(" : ")[0])
+                set_min_length = False
+            
+            only_phrases = paragraph.split(" : ")[1]
+            only_phrases = only_phrases[2:-2] # remove [[ and ]]
+            only_phrases = only_phrases.split("], [")
+            for phrase in only_phrases:
+                phrase = phrase[1:-1]
+                split_phrase = phrase.split("\', [")
+                new_phrase = split_phrase[0]
+                phrase_occurances = split_phrase[1].split(", ")
+                phrase_occurances_list = []
+                for phrase_occurance in phrase_occurances:
+                    phrase_occurances_list.append(int(phrase_occurance))
+                
+                phrase_list.append([new_phrase, phrase_occurances_list])
 
-remove_subsumed()
+            phrases.append(phrase_list)
+        print(phrases)
+            #for char_index, char in enumerate(paragraph):
 
-print_all()
+    else:
+        print("File not found")
 
-write_all_to_file()
 
+readFile = "Full"
+#readFile = "Single"
+#readFile = "Test"
+
+#read_text(readFile + ".txt", ['.', ','])
+
+#remove_subsumed()
+
+#print_all()
+
+#write_all_to_file(readFile)
+
+read_saved_phrases("Phrase_Data_Single_0.txt")
 
 
 
