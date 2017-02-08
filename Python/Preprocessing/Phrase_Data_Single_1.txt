@@ -1,0 +1,6 @@
+3 : [['when I was ', [2, 2, 5]], ['Time out of ', [9, 10, 10]], ['out of mind ', [9, 10, 10]], ['Somebody is living ', [1, 2]], ['is living in ', [1, 2]], ['living in the ', [1, 2]], ['for a certain ', [7, 8]], ['a certain period ', [7, 8]], ['of mind meaning ', [10, 10]]]
+
+4 : [['Time out of mind ', [9, 10, 10]], ['Somebody is living in ', [1, 2]], ['is living in the ', [1, 2]], ['for a certain period ', [7, 8]], ['out of mind meaning ', [10, 10]]]
+
+5 : [['Somebody is living in the ', [1, 2]], ['Time out of mind meaning ', [10, 10]]]
+

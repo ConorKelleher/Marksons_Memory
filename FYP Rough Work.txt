@@ -90,3 +90,24 @@ I will also need to REMOVE/modify some of the supposed named entities found by t
 Project mk.2 - Phrase recognition
 
 I have constructed a program to read the text. It takes the book as a whole, uses nltk to tokenise the book into its individual paragraphs
+
+Explicit exceptions to NE extraction - Words such as “Which” were being recognised as a GPE named entity, so these are removed from the serialised file. Also those which are completely subsumed are removed
+NE Exceptions:
+Which
+Van
+Gogh
+St.
+La
+Hm
+Doubtless
+Well
+Tate
+Spanish
+Eiffel
+Four
+Was
+Taddeo
+Gaddi
+Ludwig
+
+187, 1118, 1444, 2619, 2628, 2629, 2733, 3403, 3404, 3713
