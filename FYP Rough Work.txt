@@ -92,22 +92,10 @@ Project mk.2 - Phrase recognition
 I have constructed a program to read the text. It takes the book as a whole, uses nltk to tokenise the book into its individual paragraphs
 
 Explicit exceptions to NE extraction - Words such as “Which” were being recognised as a GPE named entity, so these are removed from the serialised file. Also those which are completely subsumed are removed
-NE Exceptions:
-Which
-Van
-Gogh
-St.
-La
-Hm
-Doubtless
-Well
-Tate
-Spanish
-Eiffel
-Four
-Was
-Taddeo
-Gaddi
-Ludwig
 
-187, 1118, 1444, 2619, 2628, 2629, 2733, 3403, 3404, 3713
+When going through the list of generated named entities, I found plenty of things that needed to be manually changed when the entities are extracted, so I created a list of exceptions and a list of additions. It seems that NLTK’s named entity recognition does not do so well on more complex names such as “A. E. Housman”, which resulted in the “A.” appearing at the end of one NE and “Housman” appearing as its own NE. Furthermore, I found a few names where part of the name was recognised as an NE, as well as its larger form which completely includes all instances of the smaller NE, so this is the type of thing that is an exception. Also many words such as “Ah” or first names which really won’t give any help when we are looking for a structure to the narrative
+
+I now have to ensure that when looking for cooccurrences, I do not include those when one NE is a larger version of another (e.g. cooccurrence of “Troy” and “Helen of Troy”, since this will just cloud up the results with pointless data
+
+Also, the way I have set it up, the relationships all show twice, one for each direction, so I’ll have to get rid of that before formatting it to work with gephi to visualise these networks
+

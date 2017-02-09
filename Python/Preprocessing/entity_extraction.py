@@ -3,6 +3,7 @@ import os.path
 
 class Entities(object):
     entities = None # replacing awkward tree format with simple tuples
+    single_entities = None # contains no duplicates with different tags
     textType = None
 
     def __init__(self, textType):
@@ -39,6 +40,7 @@ class Entities(object):
                 entity_string += str(entity[index][0]) + " "
             self.entities.append([str(entity.label()), entity_string])
         self.remove_exceptions()
+        self.remove_duplicates()
         self.write_all_to_file()
 
     def get_only_strings(self):
@@ -48,13 +50,33 @@ class Entities(object):
         return output
 
     def remove_exceptions(self):
-        exceptions = "Which,Van,Gogh,St.,La,Hm,Doubtless,Well,Tate,Spanish,Eiffel,Four,Was,Taddeo,Gaddi,Ludwig"
+        exceptions = "Which,Van,Gogh,St.,La,Hm,Doubtless,Well,Tate,Spanish,Eiffel,Four,Was,Taddeo,Gaddi,Ludwig,Can,William,Anxiety,Sor,Gaddis,Rogier,Weyden,Antonio,Marco,Oca,Lucien,Nor,Rain,Down,Turner,John,Water,Marco,Dear,Kerosene,Certain,Thomas,Very,Knock,Sunshine,Months,Poor,High,Part,Leonardo,Vinci,Andrea,Sarto,Kathleen,Brahms I,Jackson,Pollock,Merciful,Tell,Suppose,Keeper,Ah,Saint,Brush,Damnation,Bay,Cassandra I,Andrei,Roublev,Doubtless A.,Housman,Clara,Jan,Steen,Rainer Maria,Alto,Martin,Heidegger,All Flesh,All Meat,Lawrence,Sor Juana Ines,Antonio Montes,Greco,Grass Is,Wrist,Willem,Kooning,Callas,Long Island Sound,Jane,Broken Bottles,Willem de Kooning,Jan Vermeer,Baseball,Peter,Metropolitan Museum"
+        additions = [['PERSON', 'Rogier van der Weyden '],
+                    ['PERSON', 'Andrea senza errori '],
+                    ['PERSON', 'Andrea del Sarto '],
+                    ['PERSON', 'A. E. Housman '],
+                    ['PERSON', 'Lawrence of Arabia '],
+                    ['PERSON', 'Willem de Kooning '],
+                    ['PERSON', 'de Kooning ']]
         removals = []
         for entity in self.entities:
             if entity[1][:-1] in exceptions:
                 removals.append(entity)
         for removal in removals:
             self.entities.remove(removal)
+        self.entities.extend(additions)
+
+    def remove_duplicates(self):
+        output = []
+        for entity in self.entities:
+            broken = False
+            for found in output:
+                if entity[1] == found[1]:
+                    broken = True
+                    break
+            if not broken:
+                output.append(entity)
+        self.single_entities = output
 
     def write_all_to_file(self):
         filePath = "Named_Entities_" + self.textType

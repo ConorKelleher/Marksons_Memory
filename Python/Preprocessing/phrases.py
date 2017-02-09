@@ -156,9 +156,12 @@ class Phrases(object):
         cooccurrences = []
         
         occurrences = self.entity_occurrence_in_phrases_tuples(entities, True)
-        for occurrence in occurrences:
-            for other in occurrences:
-                if occurrence == other:
+        for occurrence_num, occurrence in enumerate(occurrences):
+            for other_num, other in enumerate(occurrences):
+# shouldn't compare same NE, and if other_num is greater than occurrence_num, we'll be
+# doubly counting a relation
+# also make sure one NE is not included in the other, as this is trivial and so pointless
+                if occurrence_num <= other_num or occurrence[0] == other[0] or occurrence[0] in other[0] or other[0] in occurrence[0]:
                     continue
                 for instance in occurrence[1]:
                     for other_instance in other[1]:
@@ -233,6 +236,98 @@ class Phrases(object):
         else:
             print("File not found")
 
+    def write_to_gephi_file(self, entities, window = 5):
+        cooccurrence_quadruples = self.cooccurrences(entities, window)
+        cooccurrence_tuples = []
+        for quad in cooccurrence_quadruples:
+            cooccurrence_tuples.append(quad[:-2])
+            #print(quad)
+
+        text = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<gexf xmlns:viz=\"http:///www.gexf.net/1.1draft/viz\" version=\"1.1\" xmlns=\"http://www.gexf.net/1.1draft\">\n<meta lastmodifieddate=\"2017-02-09+00:44\">\n<creator>Gephi 0.7</creator>\n</meta>\n<graph defaultedgetype=\"undirected\" idtype=\"string\" type=\"static\">\n<nodes count=\""
+        
+        nodes = []
+        for tuple in cooccurrence_tuples:
+            should_add = True
+            for found_tuple in nodes:
+                if tuple[0] == found_tuple[0]:
+                    should_add = False
+                    break
+            if should_add:
+                nodes.append([tuple[0]])
+            should_add = True
+            for found_tuple in nodes:
+                if tuple[1] == found_tuple[0]:
+                    should_add = False
+                    break
+            if should_add:
+                nodes.append([tuple[1]])
+
+        for i in range(len(nodes)):
+            nodes[i].append(i)
+            #print(nodes[i])
+
+
+        indexes = []
+        for tuple in cooccurrence_tuples:
+            new_edge = []
+            for node in nodes:
+                if tuple[0] == node[0]:
+                    new_edge.append(node[1])
+            for node in nodes:
+                if tuple[1] == node[0]:
+                    new_edge.append(node[1])
+            indexes.append(new_edge)
+
+        #for index in indexes:
+        #    print(index)
+
+        edges = []
+        done = []
+        for index in indexes:
+            if index in done:
+                input_index = None
+                for search_index, edge in enumerate(edges):
+                    if edge[0] == index[0] and edge[1] == index[1] or edge[0] == index[1] and edge[1] == index[1]:
+                        input_index = search_index
+                        break
+                edges[input_index][2] += 1
+            else:
+                done.append(index)
+                edges.append([index[0], index[1], 1])
+            
+        for i in range(len(nodes)):
+            nodes[i][0] = nodes[i][0][:-1]
+
+        for i in range(len(edges)):
+            edges[i] = [i, edges[i]]
+
+        text += str(len(nodes)) + "\">\n"
+
+        for node in nodes:
+            text += "<node id=\""+str(node[1])+".0\" label=\""+str(node[0])+"\"/>\n"
+        text += "</nodes>\n<edges count=\"" + str(len(edges)) + "\">\n"
+
+        for edge in edges:
+            text += "<edge id=\""+str(edge[0])+"\" source=\""+str(edge[1][0])+".0\" target=\""+str(edge[1][1])+".0\""
+            if edge[1][2] >1:
+                text += " weight=\""+str(edge[1][2])+".0\"/>\n"
+            else:
+                text += "/>\n"
+
+        
+        text += "</edges>\n</graph>\n</gexf>\n"
+        
+        filePath = "Gephi_NE_Relations_" + self.textType + "_Window" + str(window)
+        if os.path.exists(filePath + ".gexf"):
+            file_index = 0
+            while os.path.exists(filePath + "_" + str(file_index) + ".gexf"):
+                file_index += 1
+            filePath = filePath + "_" + str(file_index) + ".gexf"
+        else:
+            filePath += ".gexf"
+        file = open(filePath, "w")
+        file.write(text)
+        file.close()
 
 #read_text(readFile + ".txt", ['.', ','])
 
