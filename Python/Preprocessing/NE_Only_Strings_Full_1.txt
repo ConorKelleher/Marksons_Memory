@@ -1,0 +1,535 @@
+Somebody 
+Louvre 
+National Gallery 
+Paris 
+London 
+New York 
+Nobody 
+Turkey 
+Dardanelles 
+Hellespont 
+Troy 
+Hisarlik 
+Mount Ida 
+Helen 
+Europe 
+Yugoslavia 
+Achilles 
+Athens 
+Greece 
+Parthenon 
+Russia 
+Mexico 
+Adam 
+Simon 
+Say 
+SoHo 
+Hampstead Heath 
+Tate Gallery 
+Joseph Mallord 
+William Turner 
+Rijksmuseum 
+Amsterdam 
+Night Watch 
+Rembrandt 
+Madrid 
+Cross 
+Bordeaux 
+Pamplona 
+Rome 
+Volkswagen 
+John Keats 
+Italian 
+Giovanni 
+Keats 
+Scamander 
+Iliad 
+Homer 
+Thames 
+Arno 
+Florence 
+Uffizi 
+Seine 
+Sunlight 
+Baggage 
+Vivaldi 
+Joan Baez 
+Les Troyens 
+Berlioz 
+Jackson Pollock 
+Books 
+Aeschylus 
+Sophocles 
+Euripides 
+Clytemnestra 
+Electra 
+Alaska 
+Nome 
+Bering Strait 
+Fyodor Dostoievski 
+Hermitage 
+Moscow 
+Russian 
+Dostoievski 
+China 
+Chinese 
+Leningrad 
+Anna Karenina 
+Dmitri Shostakovitch 
+Emiliano Zapata 
+Again 
+Zapata 
+Benito Juarez 
+David Alfaro Siqueiros 
+Prado 
+Velazquez 
+Don Quixote 
+El Greco 
+Francisco de Goya 
+Adriatic 
+Lesbos 
+Scyros 
+Aegean 
+Little 
+Hereabouts 
+Marco Antonio Mantes 
+National Portrait Gallery 
+Winston Churchill 
+Dylan Thomas 
+Loire 
+Mississippi 
+Shakespeare 
+Rio Grande 
+Penelope 
+Odysseus 
+Pintoricchio 
+Ithaca 
+Aegean Sea 
+Ionian 
+Hector 
+Spartan 
+Odyssey 
+Telemachus 
+Alto Rhapsody 
+Cezanne 
+Renoir 
+Agamemnon 
+British 
+Heaven 
+American Colonial 
+Irene 
+Papas 
+Katharine Hepburn 
+Medea 
+Esther 
+William Gaddis 
+Taddeo Gaddi 
+Corinth 
+Mississippi River 
+Pennsylvania 
+Lititz 
+Spanish Steps 
+Colosseum 
+Nero 
+Julius Caesar 
+Herodotus 
+Pontius Pilate 
+Calpurnia 
+Damascus 
+Syria 
+Bethlehem 
+Lake Como 
+Giovanni Keats 
+Cuernavaca 
+Pensees 
+Spain 
+Savona 
+Italy 
+Kate 
+Bayonne 
+New Jersey 
+Via Vittorio Veneto 
+Louise Nevelson 
+Piazza Navona 
+Renaissance 
+Brunelleschi 
+Donatello 
+Giotto 
+Bruegel 
+Cat 
+Kathleen Ferrier 
+William Shakespeare 
+Toledo 
+Phidias 
+Greeks 
+Acropolis 
+Eiffel Tower 
+Cadiz 
+Cassandra Street 
+Aristotle Boulevard 
+Herodotus Square 
+Ictinus 
+Stupidity Street 
+El Greco Road 
+Gesso 
+Kirsten Flagstad 
+Orestes 
+Richard Strauss Avenue 
+Johannes Brahms Road 
+Southern Connecticut 
+Sparta 
+Halfway 
+Terry 
+Icarus 
+Egyptian 
+Dendur 
+Igor Stravinsky 
+Four Serious Songs 
+Richard Strauss 
+Land Rover 
+Central Park 
+Friedrich Nietzsche 
+Pascal 
+St. Petersburg 
+Stalingrad 
+Robert Rauschenberg 
+Robert 
+Rauschenberg 
+Homeric 
+Ralph Hodgson 
+Hermione 
+Rupert Brooke 
+Caligula 
+Verrocchio 
+Aristotle 
+Plato 
+Archimedes 
+Menelaus 
+Sappho 
+Tiepolo 
+Rape 
+Germaine Greer 
+Titian 
+Giovanni Bellini 
+Jane Avril 
+Cleopatre 
+Gazelle 
+Mlle 
+Eglantine 
+Bertrand Russell 
+Alfred North Whitehead 
+Cambridge 
+Wuthering Heights 
+Mediterranean 
+Rimini 
+Perugia 
+Venice 
+Modigliani 
+Borghese Gallery 
+Milan 
+Jewish 
+Byzantium 
+Istanbul 
+Siberia 
+Volga 
+Marina Tsvetayeva 
+Helen Frankenthaler 
+Georgia O'Keeffe 
+Kierkegaard 
+Martin Heidegger 
+National Parks 
+Cyclades Islands 
+Maiden Lane 
+Covent Garden 
+Mexican 
+French 
+Pont Neuf 
+La Gioconda 
+Madness 
+Ulysses 
+Romans 
+Spaniards 
+Domenikos Theotocopoulos 
+Gioconda 
+Mona Lisa 
+Sirens 
+Patroclus 
+Michelangelo 
+Syracuse 
+Ohio 
+Anna Akhmatova Street 
+Marco Antonio Montes 
+Skirt 
+Iphigenia 
+Tintoretto 
+Medici 
+Shostakovitch 
+Naples 
+Japanese 
+Beethoven 
+Shaw 
+Katharine 
+Hepburn 
+Hecuba 
+Marlon 
+Brando 
+Van Dyck 
+Andrei Roublev 
+Emily Bronte 
+Soren 
+Table Manners 
+Troilus 
+Scamandros 
+Branwell Bronte 
+Wuthering 
+Astyanax 
+Scamandrius 
+Alexander 
+Alexandros 
+Alexandra 
+Irene Papas 
+Socrates 
+Tchaikovsky 
+John Ruskin 
+Ruskin 
+Normally 
+John Everett Millais 
+Millais 
+Briseis 
+Samuel Butler 
+Gilbert Murray 
+Rubens 
+Jeanne Hebuterne 
+Maria Callas 
+Luigi Cherubini 
+Vincenzo Bellini 
+Norma 
+Albrecht Diirer 
+Diirer 
+Dutch 
+Andrea Mantegna 
+Too 
+Katharine Hepburn Avenue 
+Archimedes Road 
+Lancaster 
+Lititz Pharmacy 
+Gaetano Donizetti 
+Gaetano 
+Gentile Bellini 
+Music 
+Gustave Flaubert 
+Flaubert 
+Gertrude Stein 
+Jan Steen 
+Bach 
+Babe 
+Ruth 
+Lou Gehrig 
+Sam 
+Usual 
+Brooklyn 
+Stan Usual 
+Holland 
+Carel Fabritius 
+Jesus 
+Calvary 
+Lord 
+Jackie Robinson 
+Campy 
+Sien 
+Fifteen 
+Clara Schumann 
+Vienna 
+Julius 
+Caesar 
+Russell 
+Brooke 
+Garbage Disposal Area 
+Starry Night 
+Daumier 
+Degas 
+Monet 
+Maurice Utrillo 
+Utrillo 
+Suzanne Valadon 
+Gauguin 
+Zurbaran 
+Goya 
+Aha 
+Russet 
+Sooner 
+Father 
+Claude Lorrain 
+Persepolis 
+Alex 
+Ghiberti 
+Cimabue 
+Giorgione 
+Hans Memling 
+Botticelli 
+Frans 
+Hals 
+Paolo Uccello 
+Spinoza 
+Giulio Romano 
+Raphael 
+Latin 
+Torrigiano 
+Christian 
+Perugino 
+Philosophy 
+Zeno 
+Card Fabritius 
+Ralph 
+Hodgson 
+George Washington 
+Gilbert Stuart 
+David 
+Hector Berlioz 
+Hades 
+Dictys 
+Crete 
+Phrygian 
+Smyrna 
+Jacques Louis David 
+St. Teresa 
+St. John 
+Cervantes 
+La Mancha 
+Buenos 
+Saint Teresa 
+Artemisia Gentileschi 
+Galileo 
+Artemisia 
+Anna Akhmatova 
+German 
+Catholic 
+Dasein 
+George Frederick Handel 
+Johannes Keats 
+Durer 
+Goethe 
+Faust 
+Gounod 
+Liszt 
+Faust Symphony 
+Germany 
+Rainer Maria Rilke 
+Galway Bay 
+Ireland 
+Galway 
+Lake 
+Como 
+Peter O'Toole 
+Marlon Brando 
+Klytaemnestra 
+Elektra 
+Science 
+Louis Pasteur 
+Leeuwenhoek 
+Mr. Ruskin 
+Herodotus Road 
+Buddhist 
+Hindu 
+Byzantine 
+Mozart 
+Franz Schubert 
+Abraham Lincoln 
+Walt Whitman 
+Schumann 
+Whereas 
+Unfinished Symphony 
+Handel 
+Karen Silkwood 
+Danube 
+Potomac 
+Allegheny 
+Massachusetts 
+Fra Filippo Lippi 
+Trojan Women Euripides 
+Daddy 
+Mommy 
+Aunt Helen 
+Cousin Helen 
+Cousin Cly 
+Argus 
+England 
+Baez 
+Jacques Levi-Strauss 
+Jacques Barthes 
+Susan Sontag 
+Meyer Schapiro 
+Erwin Panofsky 
+Millard Meiss 
+Heinrich Wolfflin 
+Rudolf Arnheim 
+Harold Rosenberg 
+Arnold Hauser 
+Andre Malraux 
+Rend Huyghe 
+William Gaunt 
+Walter Friedlander 
+Elie Faure 
+Emile Male 
+Kenneth Clark 
+Wylie Sypher 
+Clement Greenberg 
+Herbert Read 
+Wilhelm Worringer 
+Roger Fry 
+Bernard Berenson 
+Clive Bell 
+Walter Pater 
+Jacob Burckhardt 
+Eugene Fromentin 
+Baudelaire 
+Goncourts 
+Schlegel 
+Cennini 
+Aretino 
+Alberti 
+Vasari 
+Simply 
+Campy Stengel 
+Magritte 
+Fallen Tree Avenue 
+Magritte Road 
+Bachianas Brasileiras 
+Bidti Sayao 
+Robert Schumann 
+United States 
+Argos 
+Ach 
+America 
+Soren Kierkegaard 
+Sister Joan Inez 
+Era Filippo Lippi 
+Pitcher 
+Oaxaca 
+Gato 
+Buenas 
+Pasteur 
+Long Ago 
+Xerox 
+Rainer Maria Raskolnikov 
+Antonio Vivaldi 
+Anna Magdalena 
+James Joyce 
+Poor Beethoven 
+Poor Aristotle 
+Jeanne Htbuterne 
+Clara Hepburn 
+Rogier van der Weyden 
+Andrea senza errori 
+Andrea del Sarto 
+A. E. Housman 
+Lawrence of Arabia 
+Guy Maupassant 
+de Kooning 
+Max J. Friedlander 
+Juana Ines 
+Piero di Cosimo 
+Washington D.C. 
+Hugo van der Goes 
+Piero della Francesca 
+Sistine Chapel 

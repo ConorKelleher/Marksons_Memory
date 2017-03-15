@@ -42,22 +42,33 @@ class Entities(object):
         self.remove_exceptions()
         self.remove_duplicates()
         self.write_all_to_file()
+        self.write_only_strings_to_file()
 
     def get_only_strings(self):
         output = []
         for entity in self.entities:
-            output.append(entity[1])
+            if not entity[1] in output:
+                output.append(entity[1])
         return output
 
     def remove_exceptions(self):
-        exceptions = "Which,Van,Gogh,St.,La,Hm,Doubtless,Well,Tate,Spanish,Eiffel,Four,Was,Taddeo,Gaddi,Ludwig,Can,William,Anxiety,Sor,Gaddis,Rogier,Weyden,Antonio,Marco,Oca,Lucien,Nor,Rain,Down,Turner,John,Water,Marco,Dear,Kerosene,Certain,Thomas,Very,Knock,Sunshine,Months,Poor,High,Part,Leonardo,Vinci,Andrea,Sarto,Kathleen,Brahms I,Jackson,Pollock,Merciful,Tell,Suppose,Keeper,Ah,Saint,Brush,Damnation,Bay,Cassandra I,Andrei,Roublev,Doubtless A.,Housman,Clara,Jan,Steen,Rainer Maria,Alto,Martin,Heidegger,All Flesh,All Meat,Lawrence,Sor Juana Ines,Antonio Montes,Greco,Grass Is,Wrist,Willem,Kooning,Callas,Long Island Sound,Jane,Broken Bottles,Willem de Kooning,Jan Vermeer,Baseball,Peter,Metropolitan Museum"
+        exceptions = "Say,Italian,Clara Schumann,Ach,Pitcher,Long Ago,Poor Beethoven,Poor Aristotle,Mlle,Eglantine,Sam,Usual,Stan,Usual,Julius,Garbage Disposal Area,Maurice Utrillo,Aha,Sooner,Father,Frans,Ralph,Hodgson,German,Catholic,Faust Symphony,Lake,Como,Whereas,Simply,Jewish,Mexican,Gaetano,Music,Babe,Ruth,French,Katharine,Hepburn,Marlon,Brando,Wuthering,John Ruskin,Normally,John Everett Millais,Dutch,Too,Madness,Skirt,Sunlight,Baggage,Books,Russian,Chinese,Again,Little,Hereabouts,Ionian,Spartan,British,Halfway,Egyptian,Four Serious Songs,Brooke,Robert,Rodion Romanovitch Raskolnikov,Brook,Russell,Grass Was Real,Piero,Francesca,Steps,Arabia,Ferrier,Lucia,Pablo Picasso,Rodion Romanovitch Raskolnikov Mews,Sor Juana Ines de,Hugo,Goes,Cruz,Bertrand,Russel,Piero,Cosimo,Supper,Kirsten,Flagstad,Sculpture,Sistine,Seasons,Goes,Ludwig Wittgenstein,Guy,Anna,Karenina,Good,Origin,Trojan,Maupassant,Sister,Greek,English,Strauss,Levi,Franz,Schubert,Love,Song,Akhmatova,Unless,Great,Delft,Bronte,Bellini,Gilbert,Murray,Trojan Women,Greek,Juana Ines de,Carel,Fabritius,Max J.,Jacques,Oh,Washington,D.C.,Does,Which,Van,Gogh,Vincent,Vincent Van, Vincent Van Gogh,Never,St.,La,Hm,Doubtless,Well,Tate,Spanish,Eiffel,Four,Was,Imagine,Quite,Taddeo,Gaddi,Ludwig,Can,William,Anxiety,Sor,Gaddis,Rogier,Weyden,Antonio,Marco,Oca,Lucien,Nor,Rain,Down,Turner,John,Water,Marco,Dear,Kerosene,Certain,Thomas,Very,Knock,Sunshine,Months,Poor,High,Part,Leonardo,Vinci,Andrea,Sarto,Kathleen,Brahms I,Jackson,Pollock,Merciful,Tell,Suppose,Keeper,Ah,Saint,Brush,Damnation,Bay,Cassandra I,Andrei,Roublev,Doubtless A.,Housman,Clara,Jan,Steen,Rainer Maria,Alto,Martin,Heidegger,All Flesh,All Meat,Lawrence,Sor Juana Ines,Antonio Montes,Greco,Grass Is,Wrist,Willem,Kooning,Callas,Long Island Sound,Jane,Broken Bottles,Willem de Kooning,Jan Vermeer,Baseball,Peter,Metropolitan Museum"
         additions = [['PERSON', 'Rogier van der Weyden '],
                     ['PERSON', 'Andrea senza errori '],
                     ['PERSON', 'Andrea del Sarto '],
                     ['PERSON', 'A. E. Housman '],
                     ['PERSON', 'Lawrence of Arabia '],
-                    ['PERSON', 'Willem de Kooning '],
-                    ['PERSON', 'de Kooning ']]
+                    ['PERSON', 'Guy de Maupassant '],
+                    ['PERSON', 'de Kooning '],
+                    ['PERSON', 'Max J. Friedlander '],
+                    ['PERSON', 'Juana Ines '],
+                    ['PERSON', 'Piero di Cosimo '],
+                    ['PERSON', 'Hugo van der Goes '],
+                    ['PERSON', 'Piero della Francesca '],
+                    ['PERSON', 'Mlle. Eglantine '],
+                    ['PERSON', 'Babe Ruth '],
+                    ['GPE', 'Washington D.C. '],
+                    ['GPE', 'Sistine Chapel ']]
         removals = []
         for entity in self.entities:
             if entity[1][:-1] in exceptions:
@@ -77,6 +88,23 @@ class Entities(object):
             if not broken:
                 output.append(entity)
         self.single_entities = output
+        
+    def write_only_strings_to_file(self):
+        filePath = "NE_Only_Strings_" + self.textType
+        if os.path.exists(filePath + ".txt"):
+            file_index = 0
+            while os.path.exists(filePath + "_" + str(file_index) + ".txt"):
+                file_index += 1
+            filePath = filePath + "_" + str(file_index) + ".txt"
+        else:
+            filePath += ".txt"
+        file = open(filePath, "w")
+    
+        entities = self.get_only_strings()
+        for entity in entities:
+            file.write(str(entity) + "\n")
+
+        file.close()
 
     def write_all_to_file(self):
         filePath = "Named_Entities_" + self.textType
