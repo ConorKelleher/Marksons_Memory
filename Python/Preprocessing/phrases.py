@@ -648,4 +648,7 @@ class Phrases(object):
     def most_frequent_sequences(self, entities, window, min_size):
         for phrase in reversed(self.network_sequence_repetition(entities, window, min_size)):
             print(str(phrase[0][1]) + "\toccurrences of sequence <"+phrase[0][0]+">")
+            if(len(phrase) > 1):
+                print(str(phrase[1][1]) + "\toccurrences of sequence <"+phrase[1][0]+">")
+            
         
